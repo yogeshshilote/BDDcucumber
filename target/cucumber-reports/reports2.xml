@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="26.565" tests="2" skipped="0" failures="0" errors="0">
+<testcase classname="Customer" name="Add new Customer" time="13.861">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When user opens URL "https://admin-demo.nopcommerce.com/"...................passed
+And User enters email as "admin@yourstore.com" and Password as "admin"......passed
+And Click on login..........................................................passed
+Then Page Title should be  "Dashboard / nopCommerce administration".........passed
+When User click on Customer Menu............................................passed
+And User click on customer Menu Item........................................passed
+And User click on ADD NEW button............................................passed
+Then User can view ADD new customer Page....................................passed
+When User enters customer info..............................................passed
+And click on SAVE button....................................................passed
+And Close Browser...........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Customer" name="Search customer with Email" time="12.489">
+<system-out><![CDATA[
+Given User Launch Chrome browser............................................passed
+When user opens URL "https://admin-demo.nopcommerce.com/"...................passed
+And User enters email as "admin@yourstore.com" and Password as "admin"......passed
+And Click on login..........................................................passed
+Then Page Title should be  "Dashboard / nopCommerce administration".........passed
+When User click on Customer Menu............................................passed
+And User click on customer Menu Item........................................passed
+And User click on search button.............................................passed
+Then User should found email in search table................................passed
+And Close Browser...........................................................passed
+]]></system-out>
+</testcase>
+</testsuite>

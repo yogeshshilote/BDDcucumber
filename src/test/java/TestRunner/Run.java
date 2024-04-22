@@ -10,11 +10,11 @@ import io.cucumber.testng.CucumberOptions;
 
 //@RunWith(Cucumber.class)
 @CucumberOptions(
-		features={".//Features/customer.feature",".//Features/Log.feature"},
+		features={".//Features/practice.feature"},
 		glue="stepdefinition",
-		dryRun=false,
+		dryRun=true,
 		monochrome=false,
-		//tags="@Regression",
+		//tags="@Reg",
 		//plugin= {"pretty","json:target/cucumber-reports/reports1.json", "html:target/cucumber-reports/reports11.html", "junit:target/cucumber-reports/reports2.xml"}
 		plugin= {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 		)

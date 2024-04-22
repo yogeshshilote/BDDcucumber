@@ -1,0 +1,60 @@
+/* Existing styles for Extent Report */
+
+/* Custom styles for Extent Report */
+
+/* Change background color */
+body {
+    background-color: #f2f2f2;
+}
+
+/* Change font family and color for text */
+body, .extent-report, .card {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Add border to cards */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Style test details */
+.test .test-heading, .test .test-status, .test-steps {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Style test name */
+.test .test-heading {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Style step details */
+.test-step .test-step-name, .test-step .test-step-status, .test-step .test-step-details {
+    background-color: #f9f9f9;
+    padding: 5px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
+
+/* Style step name */
+.test-step .test-step-name {
+    font-weight: bold;
+}
+
+/* Style step status */
+.test-step .test-step-status {
+    font-weight: bold;
+    color: #007bff; /* blue color */
+}
+
+/* Style step log details */
+.log-details {
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 2px solid #007bff; /* blue color */
+}

@@ -16,6 +16,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.edge.EdgeDriver;
 
 import PageObject.AddNewCustomer;
+import PageObject.AmazonePOM;
 import PageObject.LoginPage;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;
@@ -25,14 +26,14 @@ import io.cucumber.java.en.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class LoginStep extends BaseClass {
-	@Before
+	
 	public void method() {
 		System.out.println("Setup Initiated");
 		log=LogManager.getLogger("LoginStep");
 		WebDriverManager.edgedriver().setup();
 		driver=new EdgeDriver();
 		driver.manage().window().maximize();
-		log.info("Broeser setup....");
+		log.info("Browser setup....");
 	}
 	
 	@Given("User Launch Chrome browser")
@@ -40,6 +41,7 @@ public class LoginStep extends BaseClass {
 		
 		loginpg=new LoginPage(driver);
 		add=new AddNewCustomer(driver);
+		amz=new AmazonePOM(driver);
 		
 	}
 	    
@@ -84,11 +86,7 @@ public class LoginStep extends BaseClass {
 		}
 		log.info("Title validation....");
 	}
-	@Then("Close Browser")
-	public void close_browser() {
-		driver.close();
-	   log.info("Close Browser");
-	}
+	
 	@When("user click on logout link")
 	public void user_click_on_logout_link() {
 	    WebElement link=driver.findElement(By.linkText("Logout"));
@@ -155,13 +153,8 @@ public class LoginStep extends BaseClass {
 	    add.table();
 	    log.info(add.data);
 	}
-	@AfterStep
-	public void addScreenshot(Scenario scenario) {
-		
-			final byte[]screenshot=((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
-			scenario.attach(screenshot, "image/png", scenario.getName()); 
-	}
-	@After
+	
+	
 	public void teardown(Scenario sc) throws IOException {
 		System.out.println("Teardown Initiated");
 		/*if(sc.isFailed()==true) {

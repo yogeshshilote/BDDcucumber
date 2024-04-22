@@ -1,4 +1,0 @@
-Key=value
-Browser=Edge
-Data=new
-
